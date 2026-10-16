@@ -155,60 +155,53 @@
     </section>
 
     <!-- PRICING SECTION -->
-    <section id="pricing" class="max-w-6xl mx-auto px-6 pb-24">
-        <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">Choose Your Path.</h2>
-        <div class="grid lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
-            
-            <!-- Basic Tier (The Decoy) -->
-            <div class="border-2 border-brand-black p-10 bg-white shadow-[6px_6px_0_0_#0A0A0A]">
-                <h3 class="font-display text-3xl font-bold mb-2">The Blueprint Only</h3>
-                <p class="text-gray-600 mb-8 text-lg">The complete 125-page digital PDF guide.</p>
-                <div class="text-5xl font-display font-bold mb-8">₦7,500</div>
-                <ul class="space-y-4 mb-10 text-lg">
-                    <li class="flex items-center">
-                        <span class="text-brand-black font-bold mr-3">✓</span> Full Career Blueprint
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-black font-bold mr-3">✓</span> 5-Point Evaluation Matrix
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-black font-bold mr-3">✓</span> Beginner Watchlist & Resources
-                    </li>
-                </ul>
-                <a href="#" class="block text-center border-2 border-brand-black text-brand-black font-display font-bold text-xl py-4 hover:bg-gray-100 transition-colors">
-                    BUY THE E-BOOK
-                </a>
+<!-- WHATSAPP LEAD FORM SECTION -->
+<section id="pricing" class="max-w-4xl mx-auto px-6 pb-24">
+    <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6 text-center">Choose Your Path.</h2>
+    <p class="text-xl text-center mb-12 text-gray-700">Fill in your details below and choose your package. You will be redirected to my WhatsApp to finalize your access.</p>
+    
+    <div class="border-4 border-brand-black p-8 lg:p-12 bg-gray-50 brutal-shadow">
+        <form id="leadForm" class="space-y-6">
+            <!-- Name Fields -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block font-bold mb-2">First Name *</label>
+                    <input type="text" id="firstName" required class="w-full border-2 border-brand-black p-3 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                </div>
+                <div>
+                    <label class="block font-bold mb-2">Middle Name</label>
+                    <input type="text" id="middleName" class="w-full border-2 border-brand-black p-3 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                </div>
+                <div>
+                    <label class="block font-bold mb-2">Last Name *</label>
+                    <input type="text" id="lastName" required class="w-full border-2 border-brand-black p-3 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                </div>
             </div>
 
-            <!-- Premium Tier (The Target) -->
-            <div class="border-4 border-brand-blue p-12 bg-brand-black text-white brutal-shadow-blue relative lg:scale-105 z-10">
-                <div class="absolute -top-5 right-8 bg-brand-blue text-white font-display font-bold px-4 py-1 border-2 border-brand-black">MOST POPULAR</div>
-                <h3 class="font-display text-3xl font-bold mb-2">Blueprint + Mentorship</h3>
-                <p class="text-gray-400 mb-8 text-lg">The PDF + Direct access to my private builder community.</p>
-                <div class="text-5xl font-display font-bold mb-8 text-brand-blue">₦23,000</div>
-                <ul class="space-y-4 mb-10 text-lg">
-                    <li class="flex items-center">
-                        <span class="text-brand-blue font-bold mr-3">✓</span> Everything in the Basic Tier
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-blue font-bold mr-3">✓</span> Access to Private Inner Circle
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-blue font-bold mr-3">✓</span> Live Q&A and Roadmap Reviews
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-blue font-bold mr-3">✓</span> Direct Networking with Peers
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-brand-blue font-bold mr-3">✓</span> Bi-Weekly Follow up calls
-                    </li>
-                </ul>
-                <a href="#" class="block text-center bg-brand-blue text-white border-2 border-brand-black font-display font-bold text-xl py-4 brutal-shadow brutal-button-hover-blue transition-all">
-                    GET GUIDE + MENTORSHIP
-                </a>
+            <!-- Contact Fields -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block font-bold mb-2">Email Address *</label>
+                    <input type="email" id="email" required class="w-full border-2 border-brand-black p-3 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                </div>
+                <div>
+                    <label class="block font-bold mb-2">WhatsApp Number *</label>
+                    <input type="tel" id="whatsappNum" required class="w-full border-2 border-brand-black p-3 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white" placeholder="+234...">
+                </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Action Buttons -->
+            <div class="pt-8 grid md:grid-cols-2 gap-6">
+                <button type="button" onclick="submitToWhatsApp('pdf')" class="w-full text-center border-2 border-brand-black bg-white text-brand-black font-display font-bold text-lg py-4 hover:bg-gray-100 brutal-shadow transition-all">
+                    JUST PDF (₦7,500)
+                </button>
+                <button type="button" onclick="submitToWhatsApp('mentorship')" class="w-full text-center bg-brand-blue text-white border-2 border-brand-black font-display font-bold text-lg py-4 brutal-shadow-blue brutal-button-hover-blue transition-all">
+                    PDF + MENTORSHIP (₦23,000)
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
 
     <!-- FAQ SECTION -->
     <section class="max-w-3xl mx-auto px-6 py-20 border-t-4 border-brand-black">
@@ -242,7 +235,47 @@
     <footer class="bg-brand-black text-white text-center py-10 border-t-4 border-brand-black mt-12">
         <p class="font-display text-lg font-bold">© 2026 Annaelechukwu. All Rights Reserved.</p>
     </footer>
+<!-- WHATSAPP REDIRECT SCRIPT -->
+<script>
+    function submitToWhatsApp(offerType) {
+        // Get form values
+        const fName = document.getElementById('firstName').value.trim();
+        const mName = document.getElementById('middleName').value.trim();
+        const lName = document.getElementById('lastName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const waNum = document.getElementById('whatsappNum').value.trim();
 
+        // Basic validation so they don't send empty messages
+        if(!fName || !lName || !email || !waNum) {
+            alert("Please fill in all required fields (First Name, Last Name, Email, and WhatsApp Number) before continuing.");
+            return;
+        }
+
+        // Determine the offer they clicked
+        let offerName = "";
+        let price = "";
+        if(offerType === 'pdf') {
+            offerName = "PDF only";
+            price = "N7,500";
+        } else {
+            offerName = "PDF w/ Mentorship";
+            price = "N23,000";
+        }
+
+        // Construct the full name
+        const fullName = mName ? `${fName} ${mName} ${lName}` : `${fName} ${lName}`;
+
+        // Create the exact message you requested
+        const message = `Hello Sir Annaelechukwu, I am interested in the ${offerName} which costs ${price}.\n\nMy Details:\nName: ${fullName}\nEmail: ${email}\nPhone: ${waNum}`;
+
+        // REPLACE THIS NUMBER WITH YOUR ACTUAL WHATSAPP NUMBER (Include country code, no '+')
+        const yourWhatsAppNumber = "2348000000000"; 
+
+        // Encode and redirect
+        const waUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+    }
+</script>
 </body>
 </html>
 
