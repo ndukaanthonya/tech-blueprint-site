@@ -66,10 +66,23 @@
             </a>
         </div>
         <!-- PDF COVER IMAGE -->
-        <div class="hidden lg:flex justify-center p-4">
-            <!-- REPLACE 'cover.jpg' WITH YOUR ACTUAL IMAGE FILE NAME LATER -->
-            <img src="cover.png" alt="The Tech Career Blueprint PDF Cover" class="w-full max-w-md h-auto object-cover border-4 border-brand-black brutal-shadow rotate-1 hover:rotate-0 transition-transform" onerror="this.src='https://placehold.co/600x800/0A0A0A/FFF?text=PDF+COVER+IMAGE'">
+<!-- 9:16 VERTICAL VIDEO HOVER -->
+<div class="flex justify-center p-4 w-full">
+    <div id="videoContainer" class="relative w-full max-w-sm aspect-[9/16] border-4 border-brand-black brutal-shadow overflow-hidden cursor-pointer group bg-brand-black">
+        
+        <!-- 1. The Cover Image (Visible by default, disappears on hover) -->
+        <img src="cover.jpg" id="coverImage" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 z-20" alt="Blueprint Cover" onerror="this.src='https://placehold.co/1080x1920/0A0A0A/FFF?text=COVER+IMAGE'">
+        
+        <!-- 2. The Video (Hidden by default, plays on hover) -->
+        <!-- Add your video file to the folder and name it 'promo.mp4' -->
+        <video id="promoVideo" src="promo.mp4" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10" playsinline loop></video>
+        
+        <!-- Indicator Tag -->
+        <div class="absolute bottom-4 right-4 bg-brand-blue text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none">
+            TAP / HOVER TO PLAY
         </div>
+    </div>
+</div>
     </section>
 
     <!-- AGITATION SECTION -->
@@ -275,7 +288,7 @@
             </div>
 
             <button type="submit" class="w-full mt-6 bg-brand-blue text-white border-2 border-brand-black font-display font-bold text-xl py-4 brutal-shadow brutal-button-hover-blue transition-all">
-                CONTINUE TO WHATSAPP
+                GET THE BLUEPRINT
             </button>
         </form>
     </div>
@@ -340,7 +353,7 @@
             const fullName = mName ? `${fName} ${mName} ${lName}` : `${fName} ${lName}`;
             
             // The exact message format you requested
-            const message = `Hello Sir Annaelechukwu, I am interested in the ${offerName} which costs ${price}.\n\nMy Details:\nName: ${fullName}\nEmail: ${email}\nPhone: ${waNum}`;
+            const message = `Hello Sir Annaelechukwu, I am interested in the ${offerName} which costs ${price}. How do I get started?`;
 
             const waUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodeURIComponent(message)}`;
             
@@ -351,6 +364,62 @@
         }).catch((error) => {
             alert("Something went wrong saving your details. Please check your connection and try again.");
         });
+    });
+</script>
+<!-- VIDEO HOVER & SCROLL SCRIPT -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videoContainer = document.getElementById('videoContainer');
+        const video = document.getElementById('promoVideo');
+
+        // Function to play video (attempts with audio first)
+        const playVideo = () => {
+            video.volume = 1; // 100% volume
+            video.play().catch(error => {
+                // If browser blocks audio autoplay, mute it so the video still plays
+                console.log("Browser blocked audio autoplay. Playing muted.");
+                video.muted = true;
+                video.play();
+            });
+        };
+
+        // Function to pause and reset
+        const pauseVideo = () => {
+            video.pause();
+            video.currentTime = 0;
+        };
+
+        // DESKTOP: Hover events
+        videoContainer.addEventListener('mouseenter', playVideo);
+        videoContainer.addEventListener('mouseleave', pauseVideo);
+
+        // MOBILE: Tap to unmute / toggle play
+        videoContainer.addEventListener('click', () => {
+            if(video.muted) {
+                video.muted = false; // Unmute if tapped
+            }
+            if(video.paused) {
+                playVideo();
+            }
+        });
+
+        // MOBILE: Play automatically when scrolled into view
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Only trigger scroll play on mobile screens (width < 1024px)
+                    if (window.innerWidth < 1024) {
+                        if (entry.isIntersecting) {
+                            playVideo();
+                        } else {
+                            pauseVideo();
+                        }
+                    }
+                });
+            }, { threshold: 0.5 }); // Triggers when 50% of the video is visible on screen
+            
+            observer.observe(videoContainer);
+        }
     });
 </script>
 </body>
