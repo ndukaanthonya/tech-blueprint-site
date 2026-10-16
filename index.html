@@ -66,20 +66,20 @@
             </a>
         </div>
         <!-- PDF COVER IMAGE -->
+
 <!-- 9:16 VERTICAL VIDEO HOVER -->
 <div class="flex justify-center p-4 w-full">
     <div id="videoContainer" class="relative w-full max-w-sm aspect-[9/16] border-4 border-brand-black brutal-shadow overflow-hidden cursor-pointer group bg-brand-black">
         
-        <!-- 1. The Cover Image (Visible by default, disappears on hover) -->
-        <img src="cover.png" id="coverImage" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 z-20" alt="Blueprint Cover" onerror="this.src='https://placehold.co/1080x1920/0A0A0A/FFF?text=COVER+IMAGE'">
+        <!-- 1. The Cover Image -->
+        <img src="cover.jpg" id="coverImage" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 z-20" alt="Blueprint Cover" onerror="this.src='https://placehold.co/1080x1920/0A0A0A/FFF?text=COVER+IMAGE'">
         
-        <!-- 2. The Video (Hidden by default, plays on hover) -->
-        <!-- Add your video file to the folder and name it 'promo.mp4' -->
+        <!-- 2. The Video -->
         <video id="promoVideo" src="promo.mp4" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10" playsinline loop></video>
         
-        <!-- Indicator Tag -->
-        <div class="absolute bottom-4 right-4 bg-brand-blue text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none">
-            TAP / HOVER TO PLAY
+        <!-- 3. Smart Sound Indicator -->
+        <div id="soundBadge" class="absolute bottom-4 right-4 bg-brand-blue text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            ▶️ Hovering
         </div>
     </div>
 </div>
@@ -374,35 +374,41 @@
     document.addEventListener('DOMContentLoaded', () => {
         const videoContainer = document.getElementById('videoContainer');
         const video = document.getElementById('promoVideo');
+        const soundBadge = document.getElementById('soundBadge');
 
-        // Function to play video (attempts with audio first)
+        // Function to play video and handle strict browser audio rules
         const playVideo = () => {
-            video.volume = 1; // 100% volume
-            video.play().catch(error => {
-                // If browser blocks audio autoplay, mute it so the video still plays
-                console.log("Browser blocked audio autoplay. Playing muted.");
+            video.volume = 1;
+            video.muted = false; // Try to play with sound first
+            
+            video.play().then(() => {
+                // Success! Audio is playing.
+                soundBadge.innerHTML = "🔊 Playing";
+                soundBadge.className = "absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
+            }).catch(error => {
+                // Browser blocked the audio. Play muted and tell user to click.
                 video.muted = true;
                 video.play();
+                soundBadge.innerHTML = "🔇 Click for Sound";
+                soundBadge.className = "absolute bottom-4 right-4 bg-red-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
             });
         };
 
-        // Function to pause and reset
         const pauseVideo = () => {
             video.pause();
-            video.currentTime = 0;
+            video.currentTime = 0; // Reset to start
         };
 
         // DESKTOP: Hover events
         videoContainer.addEventListener('mouseenter', playVideo);
         videoContainer.addEventListener('mouseleave', pauseVideo);
 
-        // MOBILE: Tap to unmute / toggle play
+        // CLICK TO UNMUTE (For both PC and Mobile)
         videoContainer.addEventListener('click', () => {
             if(video.muted) {
-                video.muted = false; // Unmute if tapped
-            }
-            if(video.paused) {
-                playVideo();
+                video.muted = false;
+                soundBadge.innerHTML = "🔊 Sound On!";
+                soundBadge.className = "absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
             }
         });
 
@@ -410,8 +416,7 @@
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // Only trigger scroll play on mobile screens (width < 1024px)
-                    if (window.innerWidth < 1024) {
+                    if (window.innerWidth < 1024) { // Only on mobile
                         if (entry.isIntersecting) {
                             playVideo();
                         } else {
@@ -419,7 +424,7 @@
                         }
                     }
                 });
-            }, { threshold: 0.5 }); // Triggers when 50% of the video is visible on screen
+            }, { threshold: 0.5 });
             
             observer.observe(videoContainer);
         }
