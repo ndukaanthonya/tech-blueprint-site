@@ -67,20 +67,24 @@
         </div>
         <!-- PDF COVER IMAGE -->
 
-<!-- 9:16 VERTICAL VIDEO HOVER -->
+<!-- 9:16 VERTICAL VIDEO PLAYER (CLICK TO PLAY) -->
 <div class="flex justify-center p-4 w-full">
-    <div id="videoContainer" class="relative w-full max-w-sm aspect-[9/16] border-4 border-brand-black brutal-shadow overflow-hidden cursor-pointer group bg-brand-black">
+    <div id="videoContainer" class="relative w-full max-w-sm aspect-[9/16] border-4 border-brand-black brutal-shadow bg-brand-black overflow-hidden group">
         
-        <!-- 1. The Cover Image -->
-        <img src="cover.jpg" id="coverImage" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 z-20" alt="Blueprint Cover" onerror="this.src='https://placehold.co/1080x1920/0A0A0A/FFF?text=COVER+IMAGE'">
+        <!-- 1. The Cover Image (Visible by default) -->
+        <img id="coverImage" src="cover.jpg" class="absolute inset-0 w-full h-full object-cover z-20" alt="Blueprint Cover" onerror="this.src='https://placehold.co/1080x1920/0A0A0A/FFF?text=COVER+IMAGE'">
         
-        <!-- 2. The Video -->
-        <video id="promoVideo" src="promo.mp4" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10" playsinline loop></video>
-        
-        <!-- 3. Smart Sound Indicator -->
-        <div id="soundBadge" class="absolute bottom-4 right-4 bg-brand-blue text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            ▶️ Hovering
+        <!-- 2. The Play Button Overlay -->
+        <div id="playOverlay" class="absolute inset-0 z-30 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/10 transition-colors" onclick="startVideo()">
+            <div class="bg-brand-blue text-white border-4 border-brand-black px-6 py-3 flex items-center gap-3 brutal-shadow hover:scale-105 transition-transform">
+                <span class="text-2xl leading-none">▶</span>
+                <span class="font-display font-bold text-lg">WATCH PROMO</span>
+            </div>
         </div>
+
+        <!-- 3. The Video (Hidden by default, shows controls when active) -->
+        <video id="promoVideo" src="promo.mp4" class="absolute inset-0 w-full h-full object-cover z-10 hidden" playsinline controls></video>
+        
     </div>
 </div>
     </section>
@@ -371,64 +375,23 @@
 </script>
 <!-- VIDEO HOVER & SCROLL SCRIPT -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videoContainer = document.getElementById('videoContainer');
+    function startVideo() {
+        const coverImage = document.getElementById('coverImage');
+        const playOverlay = document.getElementById('playOverlay');
         const video = document.getElementById('promoVideo');
-        const soundBadge = document.getElementById('soundBadge');
 
-        // Function to play video and handle strict browser audio rules
-        const playVideo = () => {
-            video.volume = 1;
-            video.muted = false; // Try to play with sound first
-            
-            video.play().then(() => {
-                // Success! Audio is playing.
-                soundBadge.innerHTML = "🔊 Playing";
-                soundBadge.className = "absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
-            }).catch(error => {
-                // Browser blocked the audio. Play muted and tell user to click.
-                video.muted = true;
-                video.play();
-                soundBadge.innerHTML = "🔇 Click for Sound";
-                soundBadge.className = "absolute bottom-4 right-4 bg-red-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
-            });
-        };
+        // 1. Hide the cover image and play button
+        coverImage.classList.add('hidden');
+        playOverlay.classList.add('hidden');
 
-        const pauseVideo = () => {
-            video.pause();
-            video.currentTime = 0; // Reset to start
-        };
+        // 2. Reveal the video
+        video.classList.remove('hidden');
 
-        // DESKTOP: Hover events
-        videoContainer.addEventListener('mouseenter', playVideo);
-        videoContainer.addEventListener('mouseleave', pauseVideo);
-
-        // CLICK TO UNMUTE (For both PC and Mobile)
-        videoContainer.addEventListener('click', () => {
-            if(video.muted) {
-                video.muted = false;
-                soundBadge.innerHTML = "🔊 Sound On!";
-                soundBadge.className = "absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 font-display font-bold text-sm border-2 border-brand-black z-30 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100";
-            }
-        });
-
-        // MOBILE: Play automatically when scrolled into view
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (window.innerWidth < 1024) { // Only on mobile
-                        if (entry.isIntersecting) {
-                            playVideo();
-                        } else {
-                            pauseVideo();
-                        }
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            observer.observe(videoContainer);
-        }
-    });
+        // 3. Play with sound instantly (guaranteed to work because of the click)
+        video.volume = 1;
+        video.muted = false;
+        video.play();
+    }
 </script>
 </body>
 </html>
