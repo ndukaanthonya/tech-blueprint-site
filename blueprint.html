@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tech Career Blueprint | Sir Annaelechukwu</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF', // Electric Blue Accent
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Neo-Brutalist utility classes */
+        .brutal-shadow {
+            box-shadow: 6px 6px 0px 0px #0A0A0A;
+        }
+        .brutal-shadow-blue {
+            box-shadow: 6px 6px 0px 0px #0055FF;
+        }
+        .brutal-button-hover:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px #0A0A0A;
+        }
+        .brutal-button-hover-blue:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px #0055FF;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- HERO SECTION -->
+    <section class="max-w-6xl mx-auto px-6 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="font-display text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                The Absolute Beginner's guide to starting a Tech career.
+            </h1>
+            <p class="text-xl mb-10 leading-relaxed font-medium">
+                The unfiltered, no-hype blueprint for absolute beginners to choose the right skill, survive the learning curve, and land their first tech job without burning out.
+            </p>
+            <a href="#pricing" class="inline-block bg-brand-blue text-white font-display font-bold text-xl py-4 px-10 border-2 border-brand-black brutal-shadow brutal-button-hover transition-all">
+                GET THE BLUEPRINT
+            </a>
+        </div>
+        <!-- PDF COVER IMAGE -->
+
+<!-- PDF COVER IMAGE -->
+<div class="flex justify-center p-4 w-full">
+    <img src="cover.png" alt="The Tech Career Blueprint PDF Cover" class="w-full max-w-sm lg:max-w-md h-auto object-cover border-4 border-brand-black brutal-shadow rotate-1 hover:rotate-0 transition-transform" onerror="this.src='https://placehold.co/600x800/0A0A0A/FFF?text=PDF+COVER+IMAGE'">
+</div>
+    </section>
+<!-- PROMO VIDEO SECTION -->
+<section class="max-w-6xl mx-auto px-6 pb-20 pt-10">
+    <div class="flex flex-col items-center bg-gray-50 border-4 border-brand-black p-8 lg:p-16 brutal-shadow">
+        <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6 text-center">Watch: Why You Need This.</h2>
+        <p class="text-xl font-medium text-gray-700 text-center max-w-2xl mb-10">
+            Take 60 seconds to see exactly how this guide will fast-track your tech career, help you pick the right skill, and escape tutorial hell.
+        </p>
+        
+        <!-- Native HTML5 Video Player (Foolproof & Works everywhere) -->
+        <div class="w-full max-w-sm aspect-[9/16] border-4 border-brand-black brutal-shadow-blue bg-black relative">
+            <!-- Using the cover.jpg as the thumbnail for the video before they click play -->
+            <video src="promo.mp4" poster="cover.png" class="w-full h-full object-cover" controls playsinline></video>
+        </div>
+    </div>
+</section>
+    <!-- AGITATION SECTION -->
+    <section class="bg-brand-black text-white py-24 border-y-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">Are You Caught in the Survival Trap?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border-2 border-white p-8">
+                    <h3 class="font-display text-2xl font-bold mb-4 text-brand-blue">01. Micro-Task Chasing</h3>
+                    <p class="text-lg text-gray-300">Jumping from random gig to airdrop just for quick cash, building zero long-term, high-income skills.</p>
+                </div>
+                <div class="border-2 border-white p-8">
+                    <h3 class="font-display text-2xl font-bold mb-4 text-brand-blue">02. Tutorial Purgatory</h3>
+                    <p class="text-lg text-gray-300">Watching 10-hour YouTube coding tutorials but freezing up the second you look at a blank screen.</p>
+                </div>
+                <div class="border-2 border-white p-8">
+                    <h3 class="font-display text-2xl font-bold mb-4 text-brand-blue">03. Tool Overload</h3>
+                    <p class="text-lg text-gray-300">Feeling completely paralyzed by whether you should learn UI/UX, Python, Web3, or No-Code first.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABLE OF CONTENTS SECTION -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">Inside The Blueprint</h2>
+        <div class="border-4 border-brand-black p-8 brutal-shadow bg-white">
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-lg">
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Intro:</strong> What is Tech & Why It Matters</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 1:</strong> Self-Discovery Stage (Know Yourself)</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 2:</strong> Future Tech & Skills Research Stage</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 3:</strong> Work Environment</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 4:</strong> Basic Digital Skills</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 5:</strong> Skill Exploration Stage (The 48-Hour Test)</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 6:</strong> Top 5 Skills Selection Stage</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 7:</strong> Deep Skill Selection & Career Path Design</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 8:</strong> Learning Strategy & Consistency</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 9:</strong> Community & Networking</div>
+                <div class="border-b-2 border-gray-100 pb-2"><strong>Chapter 10:</strong> The First Tech Job & Beyond</div>
+                <div class="border-b-2 border-gray-100 pb-2 text-brand-blue font-bold"><strong>Appendix:</strong> Beginner's Watchlist & Resources</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="bg-gray-50 text-brand-black py-24 border-y-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">Don't Just Take My Word For It.</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- TESTIMONIAL 1 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-white overflow-hidden">
+                    <img src="testimony1.png" alt="Student Testimonial" class="w-full h-auto" onerror="this.src='https://placehold.co/400x600/e2e8f0/0A0A0A?text=WhatsApp+Screenshot+1'">
+                </div>
+                <!-- TESTIMONIAL 2 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-white overflow-hidden">
+                    <img src="testimony2.jpg" alt="Student Testimonial" class="w-full h-auto" onerror="this.src='https://placehold.co/400x600/e2e8f0/0A0A0A?text=WhatsApp+Screenshot+2'">
+                </div>
+                <!-- TESTIMONIAL 3 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-white overflow-hidden">
+                    <img src="testimony3.jpg" alt="Student Testimonial" class="w-full h-auto" onerror="this.src='https://placehold.co/400x600/e2e8f0/0A0A0A?text=WhatsApp+Screenshot+3'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT THE AUTHOR -->
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <div class="border-4 border-brand-black p-10 lg:p-14 brutal-shadow bg-white flex flex-col md:flex-row items-center gap-10">
+            <!-- AUTHOR HEADSHOT -->
+            <div class="shrink-0">
+                <img src="headshot.jpg" alt="Annaelechukwu" class="w-48 h-48 object-cover border-4 border-brand-black brutal-shadow-blue rounded-full" onerror="this.src='https://placehold.co/300x300/0055FF/FFF?text=Your+Face'">
+            </div>
+            <div>
+                <h2 class="font-display text-3xl font-bold mb-4">Who is Guiding You?</h2>
+                <p class="text-lg leading-relaxed mb-4 text-gray-800">
+    <strong class="text-black">Annaelechukwu</strong> is a Community manager and a Web3 ecosystem builder. Having mentored hundreds of beginners and organized massive developer conferences, he sees exactly why beginners fail, burn out, and quit. 
+                </p>
+                <p class="text-lg leading-relaxed font-bold italic text-brand-blue">
+                    "I wrote this guide to cut through the industry hype, help you survive the learning cliff, and build a lasting career in tech."
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- PRICING SECTION -->
+<section id="pricing" class="max-w-6xl mx-auto px-6 pb-24">
+    <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">Choose Your Path.</h2>
+    <div class="grid lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+        
+        <!-- Basic Tier (The Decoy) -->
+        <div class="border-2 border-brand-black p-10 bg-white shadow-[6px_6px_0_0_#0A0A0A]">
+            <h3 class="font-display text-3xl font-bold mb-2">The Blueprint Only</h3>
+            <p class="text-gray-600 mb-8 text-lg">The complete 125-page digital PDF guide.</p>
+            <div class="text-5xl font-display font-bold mb-8">₦7,500</div>
+            <ul class="space-y-4 mb-10 text-lg">
+                <li class="flex items-center">
+                    <span class="text-brand-black font-bold mr-3">✓</span> Full Career Blueprint
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-black font-bold mr-3">✓</span> 5-Point Evaluation Matrix
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-black font-bold mr-3">✓</span> Beginner Watchlist & Resources
+                </li>
+            </ul>
+            <button onclick="openModal('pdf')" class="w-full block text-center border-2 border-brand-black text-brand-black font-display font-bold text-xl py-4 hover:bg-gray-100 transition-colors">
+                GET THE E-BOOK
+            </button>
+        </div>
+
+        <!-- Premium Tier (The Target) -->
+        <div class="border-4 border-brand-blue p-12 bg-brand-black text-white brutal-shadow-blue relative lg:scale-105 z-10">
+            <div class="absolute -top-5 right-8 bg-brand-blue text-white font-display font-bold px-4 py-1 border-2 border-brand-black">MOST POPULAR</div>
+            <h3 class="font-display text-3xl font-bold mb-2">Blueprint + Mentorship</h3>
+            <p class="text-gray-400 mb-8 text-lg">The PDF + Direct access to my private builder community.</p>
+            <div class="text-5xl font-display font-bold mb-8 text-brand-blue">₦23,000</div>
+            <ul class="space-y-4 mb-10 text-lg">
+                <li class="flex items-center">
+                    <span class="text-brand-blue font-bold mr-3">✓</span> Everything in the Basic Tier
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-blue font-bold mr-3">✓</span> Access to Private Inner Circle
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-blue font-bold mr-3">✓</span> Live Q&A and Roadmap Reviews
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-blue font-bold mr-3">✓</span> Direct Networking with Peers
+                </li>
+                <li class="flex items-center">
+                    <span class="text-brand-blue font-bold mr-3">✓</span> Bi-Weekly Follow up calls
+                </li>
+            </ul>
+            <button onclick="openModal('mentorship')" class="w-full block text-center bg-brand-blue text-white border-2 border-brand-black font-display font-bold text-xl py-4 brutal-shadow brutal-button-hover-blue transition-all">
+                GET GUIDE + MENTORSHIP
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ SECTION -->
+    <section class="max-w-3xl mx-auto px-6 py-20 border-t-4 border-brand-black">
+        <h2 class="font-display text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <details class="group border-2 border-brand-black p-6 bg-white cursor-pointer brutal-shadow">
+                <summary class="font-display font-bold text-xl flex justify-between items-center">
+                    Is this for absolute beginners?
+                    <span class="group-open:rotate-45 transition-transform text-brand-blue text-2xl">+</span>
+                </summary>
+                <p class="mt-4 text-lg text-gray-700">Yes. This guide is built specifically for people who have zero technical background. It walks you through basic digital literacy before ever touching code or design.</p>
+            </details>
+            <details class="group border-2 border-brand-black p-6 bg-white cursor-pointer brutal-shadow">
+                <summary class="font-display font-bold text-xl flex justify-between items-center">
+                    Do I need an expensive laptop?
+                    <span class="group-open:rotate-45 transition-transform text-brand-blue text-2xl">+</span>
+                </summary>
+                <p class="mt-4 text-lg text-gray-700">Not really, A core chapter of this book explains why you do not necessarily need a ₦1.5M laptop to start. I show you how to start with basic hardware and free tools.</p>
+            </details>
+            <details class="group border-2 border-brand-black p-6 bg-white cursor-pointer brutal-shadow">
+                <summary class="font-display font-bold text-xl flex justify-between items-center">
+                    What happens after I pay?
+                    <span class="group-open:rotate-45 transition-transform text-brand-blue text-2xl">+</span>
+                </summary>
+                <p class="mt-4 text-lg text-gray-700">You will instantly receive an email with a link to download the PDF. If you chose the Mentorship tier, you will also receive the private link to join the inner circle community.</p>
+            </details>
+        </div>
+    </section>
+<!-- POP-UP LEAD FORM MODAL -->
+<div id="leadModal" class="fixed inset-0 z-50 hidden bg-brand-black/90 flex items-center justify-center px-4">
+    <div class="bg-white border-4 border-brand-black p-8 w-full max-w-2xl relative brutal-shadow">
+        <!-- Close Button -->
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-4xl font-bold hover:text-brand-blue leading-none">&times;</button>
+        
+        <h3 class="font-display text-3xl font-bold mb-2">Almost there!</h3>
+        <p class="text-gray-600 mb-6">Enter your details to register. You'll be redirected to WhatsApp to finalize your access.</p>
+        
+        <!-- The Form (data-netlify="true" tells Netlify to save this data!) -->
+        <form id="leadForm" name="Tech_Blueprint_Leads" data-netlify="true" class="space-y-4">
+            <!-- Hidden input to track which offer they clicked -->
+            <input type="hidden" name="Offer_Selected" id="offerSelectedInput">
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block font-bold mb-1 text-sm">First Name *</label>
+                    <input type="text" name="First_Name" id="firstName" required class="w-full border-2 border-brand-black p-2 focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-sm">Middle Name</label>
+                    <input type="text" name="Middle_Name" id="middleName" class="w-full border-2 border-brand-black p-2 focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-sm">Last Name *</label>
+                    <input type="text" name="Last_Name" id="lastName" required class="w-full border-2 border-brand-black p-2 focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block font-bold mb-1 text-sm">Email Address *</label>
+                    <input type="email" name="Email" id="email" required class="w-full border-2 border-brand-black p-2 focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-sm">WhatsApp Number *</label>
+                    <input type="tel" name="WhatsApp_Number" id="whatsappNum" required class="w-full border-2 border-brand-black p-2 focus:outline-none focus:ring-2 focus:ring-brand-blue" placeholder="+234...">
+                </div>
+            </div>
+
+            <button type="submit" class="w-full mt-6 bg-brand-blue text-white border-2 border-brand-black font-display font-bold text-xl py-4 brutal-shadow brutal-button-hover-blue transition-all">
+                GET THE BLUEPRINT
+            </button>
+        </form>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white text-center py-10 border-t-4 border-brand-black mt-12">
+        <p class="font-display text-lg font-bold">© 2026 Annaelechukwu. All Rights Reserved.</p>
+    </footer>
+<!-- MODAL & WHATSAPP REDIRECT SCRIPT -->
+<script>
+    let currentOffer = '';
+
+    // Open the modal when they click a pricing button
+    function openModal(offerType) {
+        currentOffer = offerType;
+        document.getElementById('offerSelectedInput').value = offerType; // Save which button they clicked
+        document.getElementById('leadModal').classList.remove('hidden'); // Show the pop-up
+    }
+
+    // Close the modal
+    function closeModal() {
+        document.getElementById('leadModal').classList.add('hidden');
+    }
+
+    // Handle the form submission
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop page from refreshing
+
+        // 1. Gather all the data typed in the form
+        const form = e.target;
+        const formData = new FormData(form);
+        formData.append('form-name', 'Tech_Blueprint_Leads'); // Tells Netlify where to save it
+
+        // 2. Save the data to Netlify's built-in backend
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        }).then(() => {
+            
+            // 3. After data is saved, generate the WhatsApp message
+            const fName = document.getElementById('firstName').value.trim();
+            const mName = document.getElementById('middleName').value.trim();
+            const lName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const waNum = document.getElementById('whatsappNum').value.trim();
+
+            let offerName = "";
+            let price = "";
+            if(currentOffer === 'pdf') {
+                offerName = "PDF only";
+                price = "N7,500";
+            } else {
+                offerName = "PDF w/ Mentorship";
+                price = "N23,000";
+            }
+
+            // REPLACE THIS NUMBER WITH YOUR ACTUAL WHATSAPP NUMBER
+            const yourWhatsAppNumber = "2348000000000"; 
+            
+            // Clean up the name spacing
+            const fullName = mName ? `${fName} ${mName} ${lName}` : `${fName} ${lName}`;
+            
+            // The exact message format you requested
+            const message = `Hello Sir Annaelechukwu, I am interested in the ${offerName} which costs ${price}. How do I get started?`;
+
+            const waUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Hide modal and open WhatsApp!
+            closeModal();
+            window.open(waUrl, '_blank');
+
+        }).catch((error) => {
+            alert("Something went wrong saving your details. Please check your connection and try again.");
+        });
+    });
+</script>
+<!-- VIDEO HOVER & SCROLL SCRIPT -->
+<script>
+    function startVideo() {
+        const coverImage = document.getElementById('coverImage');
+        const playOverlay = document.getElementById('playOverlay');
+        const video = document.getElementById('promoVideo');
+
+        // 1. Hide the cover image and play button
+        coverImage.classList.add('hidden');
+        playOverlay.classList.add('hidden');
+
+        // 2. Reveal the video
+        video.classList.remove('hidden');
+
+        // 3. Play with sound instantly (guaranteed to work because of the click)
+        video.volume = 1;
+        video.muted = false;
+        video.play();
+    }
+</script>
+</body>
+</html>
+

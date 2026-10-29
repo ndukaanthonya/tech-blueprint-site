@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Courses | Anthony Nduka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF',
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px #0A0A0A; }
+        .brutal-hover:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0A0A0A; }
+    </style>
+</head>
+<body class="bg-white text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- CENTERED NAVIGATION BAR -->
+    <nav class="border-b-4 border-brand-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center">
+            <ul class="flex space-x-2 md:space-x-8 font-display font-bold text-sm md:text-lg">
+                <li><a href="index.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">HOME</a></li>
+                <li><a href="products.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors bg-brand-black text-white">PRODUCTS</a></li>
+                <li><a href="work.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">WORK</a></li>
+                <li><a href="about.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ABOUT</a></li>
+                <li><a href="archives.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ARCHIVES</a></li>
+                <li><a href="contact.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PRODUCTS HEADER -->
+    <section class="bg-brand-blue text-white py-20 border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="font-display text-5xl lg:text-7xl font-bold mb-4">Digital Products & Courses</h1>
+            <p class="text-xl font-medium max-w-2xl mx-auto">Frameworks, roadmaps, and systems I use to build communities and careers in tech.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCT LISTINGS -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <!-- TECH CAREER BLUEPRINT (Links to your sales page!) -->
+            <div class="border-4 border-brand-black brutal-shadow bg-[#f4f4f4] p-8 flex flex-col">
+                <div class="bg-brand-black text-white inline-block px-3 py-1 font-display font-bold text-sm mb-6 w-max border-2 border-brand-black">BEST SELLER</div>
+                <h2 class="font-display text-3xl font-bold mb-4">The Tech Career Blueprint</h2>
+                <p class="text-lg text-gray-700 mb-8 flex-grow">The unfiltered, 125-page roadmap for absolute beginners to escape tutorial hell, choose the right skill, and land their first tech job without burning out.</p>
+                <div class="flex items-center gap-4">
+                    <a href="blueprint.html" class="block w-full text-center bg-brand-blue text-white font-display font-bold text-xl py-4 border-4 border-brand-black brutal-hover transition-all">
+                        VIEW SALES PAGE
+                    </a>
+                </div>
+            </div>
+
+            <!-- FUTURE COURSE PLACEHOLDER -->
+            <div class="border-4 border-brand-black brutal-shadow bg-white p-8 flex flex-col opacity-75">
+                <div class="bg-gray-200 text-brand-black inline-block px-3 py-1 font-display font-bold text-sm mb-6 w-max border-2 border-brand-black">COMING SOON</div>
+                <h2 class="font-display text-3xl font-bold mb-4">Intro to Vibecoding</h2>
+                <p class="text-lg text-gray-700 mb-8 flex-grow">A masterclass on building software by just talking to AI. Learn how to launch apps with zero coding experience.</p>
+                <button disabled class="block w-full text-center bg-gray-200 text-gray-500 font-display font-bold text-xl py-4 border-4 border-brand-black cursor-not-allowed">
+                    JOIN WAITLIST
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
