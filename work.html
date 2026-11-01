@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof of Work | Anthony Nduka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF',
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px #0A0A0A; }
+        .brutal-shadow-blue { box-shadow: 6px 6px 0px 0px #0055FF; }
+        .brutal-hover:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0A0A0A; }
+    </style>
+</head>
+<body class="bg-[#f4f4f4] text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- CENTERED NAVIGATION BAR -->
+    <nav class="border-b-4 border-brand-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center overflow-x-auto">
+            <ul class="flex space-x-2 md:space-x-8 font-display font-bold text-sm md:text-lg whitespace-nowrap">
+                <li><a href="index.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">HOME</a></li>
+                <li><a href="products.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">PRODUCTS</a></li>
+                <li><a href="work.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors bg-brand-black text-white">WORK</a></li>
+                <li><a href="about.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ABOUT</a></li>
+                <li><a href="archives.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ARCHIVES</a></li>
+                <li><a href="contact.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="bg-brand-blue text-white py-20 border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h1 class="font-display text-5xl lg:text-7xl font-bold mb-4">Proof of Work.</h1>
+            <p class="text-xl font-medium max-w-2xl">I don't just talk about community growth. Here are the receipts from the last 4 years of building in the Web3 ecosystem.</p>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="max-w-6xl mx-auto px-6 py-24 space-y-24">
+        
+        <!-- CELO EXPERIENCE -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 relative h-[400px] w-full">
+                <!-- Media Gallery (Images or GIFs) -->
+                <img src="celo-1.jpg" alt="Celo Event" class="absolute top-0 left-0 w-2/3 h-64 object-cover border-4 border-brand-black brutal-shadow -rotate-3 hover:rotate-0 transition-transform z-10" onerror="this.src='https://placehold.co/600x400/0A0A0A/FFF?text=CELO+EVENT+GIF'">
+                <img src="celo-2.jpg" alt="Minipay Campaign" class="absolute bottom-0 right-0 w-2/3 h-64 object-cover border-4 border-brand-black brutal-shadow-blue rotate-3 hover:rotate-0 transition-transform z-20" onerror="this.src='https://placehold.co/600x400/0055FF/FFF?text=MINIPAY+CAMPAIGN'">
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-block bg-brand-black text-white px-3 py-1 font-display font-bold text-sm mb-4 border-2 border-brand-black">2020 - 2024</div>
+                <h2 class="font-display text-4xl font-bold mb-2">Regional Community Lead</h2>
+                <h3 class="text-2xl text-brand-blue font-bold mb-6">@ Celo</h3>
+                <ul class="space-y-4 text-lg text-gray-800">
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Co-planned and launched the Minipay Ambassadorship program, driving community growth strategies that successfully onboarded 2M+ users to Celo's consumer product.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Initiated the presence of Celo Community in Nigeria, securing 1,500+ active members in just the first 4 months.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Hosted over 50 virtual events and 13 massive in-person campus meetups across Nigerian universities.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="border-2 border-brand-black">
+
+        <!-- BLOCKCHAINUNN EXPERIENCE -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block bg-brand-black text-white px-3 py-1 font-display font-bold text-sm mb-4 border-2 border-brand-black">2021 - 2023</div>
+                <h2 class="font-display text-4xl font-bold mb-2">Community Lead</h2>
+                <h3 class="text-2xl text-brand-blue font-bold mb-6">@ BlockchainUNN</h3>
+                <ul class="space-y-4 text-lg text-gray-800">
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Orchestrated the largest Blockchain Campus Conference in Africa, drawing a record-breaking crowd of over 3,000 attendees and securing major media coverage.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Hosted over 60 virtual educational sessions, driving a 50% increase in active developer engagement within year one.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Spearheaded strategic partnerships that resulted in a 40% increase in organizational revenue.</li>
+                </ul>
+            </div>
+            <div class="relative h-[400px] w-full">
+                <!-- Media Gallery (Images or GIFs) -->
+                <img src="unn-1.gif" alt="BlockchainUNN Crowd GIF" class="absolute top-4 right-4 w-3/4 h-72 object-cover border-4 border-brand-black brutal-shadow rotate-2 hover:rotate-0 transition-transform z-20" onerror="this.src='https://placehold.co/600x400/0A0A0A/FFF?text=3000+CROWD+GIF'">
+                <img src="unn-2.jpg" alt="Speaking on Stage" class="absolute bottom-4 left-0 w-2/3 h-56 object-cover border-4 border-brand-black brutal-shadow-blue -rotate-3 hover:rotate-0 transition-transform z-10" onerror="this.src='https://placehold.co/600x400/0055FF/FFF?text=STAGE+PHOTO'">
+            </div>
+        </div>
+
+        <hr class="border-2 border-brand-black">
+
+        <!-- FTX EXPERIENCE -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 relative h-[400px] w-full">
+                <!-- Media Gallery (Images or GIFs) -->
+                <img src="ftx-1.jpg" alt="FTX Workshop" class="absolute top-0 left-4 w-3/4 h-64 object-cover border-4 border-brand-black brutal-shadow -rotate-2 hover:rotate-0 transition-transform z-20" onerror="this.src='https://placehold.co/600x400/0A0A0A/FFF?text=FTX+WORKSHOP+PHOTO'">
+                <img src="ftx-2.gif" alt="FTX Campaign" class="absolute bottom-0 right-4 w-2/3 h-56 object-cover border-4 border-brand-black brutal-shadow-blue rotate-4 hover:rotate-0 transition-transform z-10" onerror="this.src='https://placehold.co/600x400/0055FF/FFF?text=VIRTUAL+EVENT+GIF'">
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-block bg-brand-black text-white px-3 py-1 font-display font-bold text-sm mb-4 border-2 border-brand-black">2021 - 2022</div>
+                <h2 class="font-display text-4xl font-bold mb-2">Community Ambassador</h2>
+                <h3 class="text-2xl text-brand-blue font-bold mb-6">@ FTX</h3>
+                <ul class="space-y-4 text-lg text-gray-800">
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Onboarded and trained 5,000+ community members with foundational web and crypto trading education.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Executed campaign strategies for user acquisition that generated over 100+ sign-ups on a personal account and $1M in monthly trading volume.</li>
+                    <li class="flex items-start"><span class="text-brand-black font-bold mr-3 mt-1">✓</span> Led the FTX Africa Community Ambassador Team and significantly boosted community engagement by 70%.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="bg-brand-black text-white py-24 border-y-4 border-brand-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6">Let's Build Your Community.</h2>
+            <p class="text-xl text-gray-400 mb-10">Whether you are launching a Web3 protocol or scaling an existing ecosystem, I have the blueprint to drive real user acquisition.</p>
+            <a href="contact.html" class="inline-block bg-brand-blue text-white font-display font-bold text-xl py-4 px-10 border-4 border-brand-black brutal-shadow-blue brutal-hover-blue transition-all">
+                HIRE ME / CONTACT
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white text-center py-10">
+        <p class="font-display text-lg font-bold">© 2026 Anthony Nduka. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
