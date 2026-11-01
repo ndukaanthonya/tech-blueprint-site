@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives & Articles | Anthony Nduka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF',
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px #0A0A0A; }
+        .brutal-shadow-blue { box-shadow: 6px 6px 0px 0px #0055FF; }
+        .brutal-hover:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0A0A0A; }
+    </style>
+</head>
+<body class="bg-[#f4f4f4] text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+    <!-- CENTERED NAVIGATION BAR -->
+    <nav class="border-b-4 border-brand-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center overflow-x-auto">
+            <ul class="flex space-x-2 md:space-x-8 font-display font-bold text-sm md:text-lg whitespace-nowrap">
+                <li><a href="index.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">HOME</a></li>
+                <li><a href="products.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">PRODUCTS</a></li>
+                <li><a href="work.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">WORK</a></li>
+                <li><a href="about.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ABOUT</a></li>
+                <li><a href="archives.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors bg-brand-black text-white">ARCHIVES</a></li>
+                <li><a href="contact.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="bg-brand-blue text-white py-20 border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="font-display text-5xl lg:text-7xl font-bold mb-4">The Archives.</h1>
+            <p class="text-xl font-medium max-w-2xl mx-auto">Thoughts, essays, and deep dives on Web3 adoption, community architecture, and tech growth.</p>
+        </div>
+    </section>
+
+    <!-- ARTICLES FEED -->
+    <section class="max-w-4xl mx-auto px-6 py-24 flex-grow w-full space-y-12">
+        
+        <!-- ARTICLE 1 -->
+        <article class="bg-white border-4 border-brand-black p-8 brutal-shadow group transition-all">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                <div class="bg-brand-black text-white inline-block px-3 py-1 font-display font-bold text-sm border-2 border-brand-black w-max">COMMUNITY STRATEGY</div>
+                <div class="font-bold text-gray-500">October 14, 2026</div>
+            </div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 group-hover:text-brand-blue transition-colors">Why Most Web3 Communities Fail (And How to Fix It)</h2>
+            <p class="text-lg text-gray-700 mb-6">A discord server with 10,000 members isn't a community if only 5 people are talking. Here is the framework I used to onboard 2M+ users without losing culture.</p>
+            <a href="#" class="inline-flex items-center font-display font-bold text-lg text-brand-black hover:text-brand-blue transition-colors">
+                READ ARTICLE <span class="ml-2 text-2xl leading-none">&rarr;</span>
+            </a>
+        </article>
+
+        <!-- ARTICLE 2 -->
+        <article class="bg-white border-4 border-brand-black p-8 brutal-shadow group transition-all">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                <div class="bg-brand-black text-white inline-block px-3 py-1 font-display font-bold text-sm border-2 border-brand-black w-max">CAREER GROWTH</div>
+                <div class="font-bold text-gray-500">August 22, 2026</div>
+            </div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 group-hover:text-brand-blue transition-colors">From Tutorial Hell to Ecosystem Builder</h2>
+            <p class="text-lg text-gray-700 mb-6">The biggest mistake beginners make is thinking they need to know everything before they start speaking, volunteering, or building. My exact blueprint to breaking in.</p>
+            <a href="#" class="inline-flex items-center font-display font-bold text-lg text-brand-black hover:text-brand-blue transition-colors">
+                READ ARTICLE <span class="ml-2 text-2xl leading-none">&rarr;</span>
+            </a>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="bg-white border-4 border-brand-black p-8 brutal-shadow group transition-all">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                <div class="bg-brand-black text-white inline-block px-3 py-1 font-display font-bold text-sm border-2 border-brand-black w-max">WEB3 & PAYMENTS</div>
+                <div class="font-bold text-gray-500">May 05, 2026</div>
+            </div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 group-hover:text-brand-blue transition-colors">Driving Stablecoin Utility in Africa</h2>
+            <p class="text-lg text-gray-700 mb-6">Securing the Prezenti Almond Grant taught me that adoption requires localized trust. Here is how we are structuring self-custodial digital payments at cKash.</p>
+            <a href="#" class="inline-flex items-center font-display font-bold text-lg text-brand-black hover:text-brand-blue transition-colors">
+                READ ARTICLE <span class="ml-2 text-2xl leading-none">&rarr;</span>
+            </a>
+        </article>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white text-center py-10 border-t-4 border-brand-black mt-auto">
+        <p class="font-display text-lg font-bold">© 2026 Anthony Nduka. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
