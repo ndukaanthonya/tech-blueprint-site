@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Public Speaking 2.0 | Anthony Nduka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF',
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px #0A0A0A; }
+        .brutal-shadow-blue { box-shadow: 6px 6px 0px 0px #0055FF; }
+        .brutal-hover:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0A0A0A; }
+        .brutal-hover-blue:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0055FF; }
+    </style>
+</head>
+<body class="bg-[#f4f4f4] text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- CENTERED NAVIGATION BAR -->
+    <nav class="border-b-4 border-brand-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center overflow-x-auto">
+            <ul class="flex space-x-2 md:space-x-8 font-display font-bold text-sm md:text-lg whitespace-nowrap">
+                <li><a href="index.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">HOME</a></li>
+                <li><a href="products.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors text-brand-blue">PRODUCTS</a></li>
+                <li><a href="work.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">WORK</a></li>
+                <li><a href="about.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ABOUT</a></li>
+                <li><a href="archives.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ARCHIVES</a></li>
+                <li><a href="contact.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-brand-blue text-white py-20 lg:py-32 border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="bg-brand-black text-white inline-block px-4 py-2 font-display font-bold text-sm mb-6 border-2 border-white">LIVE CAMPUS WORKSHOP</div>
+                <h1 class="font-display text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    Mastering Public Speaking 2.0
+                </h1>
+                <p class="text-xl mb-10 leading-relaxed font-medium">
+                    Stop letting stage fright gatekeep your career. Learn how to command the room, articulate your value, and deliver high-impact presentations.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                    <div class="bg-white text-brand-black border-4 border-brand-black p-4 brutal-shadow flex-1">
+                        <p class="font-bold text-sm text-gray-500 uppercase">Date & Time</p>
+                        <p class="font-display font-bold text-xl">Nov 7, 2026 | 09:00 AM</p>
+                    </div>
+                    <div class="bg-white text-brand-black border-4 border-brand-black p-4 brutal-shadow flex-1">
+                        <p class="font-bold text-sm text-gray-500 uppercase">Location</p>
+                        <p class="font-display font-bold text-xl">Disclosed to VIPs</p>
+                    </div>
+                </div>
+
+                <a href="https://www.nestuge.com/mps2026" target="_blank" class="inline-block bg-brand-black text-white font-display font-bold text-xl py-4 px-10 border-4 border-brand-black brutal-shadow brutal-hover transition-all w-full text-center lg:w-auto">
+                    SECURE YOUR VIP TICKET
+                </a>
+            </div>
+            
+            <!-- FLYER IMAGE -->
+            <div class="flex justify-center p-4">
+                <img src="mps-flyer.jpg" alt="Mastering Public Speaking 2.0 Flyer" class="w-full max-w-md h-auto object-cover border-4 border-brand-black brutal-shadow rotate-2 hover:rotate-0 transition-transform" onerror="this.src='https://placehold.co/600x600/0A0A0A/FFF?text=FLYER+IMAGE'">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF OF WORK: PAST ENGAGEMENTS GALLERY -->
+    <section class="py-24 bg-white border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-4 text-center">Proof of Work.</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">I don't just teach theory. I've hosted Africa's largest blockchain campus conference and represented global brands on massive stages.</p>
+            
+            <!-- IMAGE SHOWCASE GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Image 1 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-gray-200 overflow-hidden group aspect-square">
+                    <img src="stage1.jpg" alt="Speaking Engagement 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/e2e8f0/0A0A0A?text=PAST+STAGE+1'">
+                </div>
+                <!-- Image 2 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-gray-200 overflow-hidden group aspect-square md:translate-y-8">
+                    <img src="stage2.jpg" alt="Speaking Engagement 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/e2e8f0/0A0A0A?text=PAST+STAGE+2'">
+                </div>
+                <!-- Image 3 -->
+                <div class="border-4 border-brand-black brutal-shadow bg-gray-200 overflow-hidden group aspect-square">
+                    <img src="stage3.jpg" alt="Speaking Engagement 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/e2e8f0/0A0A0A?text=PAST+STAGE+3'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKET BENEFITS -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="font-display text-4xl lg:text-5xl font-bold mb-16 text-center">What's Included in the VIP Ticket?</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="border-4 border-brand-black p-8 bg-white brutal-shadow">
+                <h3 class="font-display text-2xl font-bold mb-3 text-brand-blue">01. Certificate</h3>
+                <p class="text-gray-700 font-medium">Official Certificate of Participation to boost your portfolio and LinkedIn profile.</p>
+            </div>
+            <div class="border-4 border-brand-black p-8 bg-white brutal-shadow">
+                <h3 class="font-display text-2xl font-bold mb-3 text-brand-blue">02. Q&A Sessions</h3>
+                <p class="text-gray-700 font-medium">Exclusive practical sessions allowing you to ask direct, targeted questions.</p>
+            </div>
+            <div class="border-4 border-brand-black p-8 bg-white brutal-shadow">
+                <h3 class="font-display text-2xl font-bold mb-3 text-brand-blue">03. Mentorship</h3>
+                <p class="text-gray-700 font-medium">1 Month Virtual Mentorship (Post Event) to ensure you implement what you learn.</p>
+            </div>
+            <div class="border-4 border-brand-black p-8 bg-white brutal-shadow">
+                <h3 class="font-display text-2xl font-bold mb-3 text-brand-blue">04. Bonus Workshop</h3>
+                <p class="text-gray-700 font-medium">Free In-Person Workshop (Post Event) for continued hands-on training.</p>
+            </div>
+            <div class="border-4 border-brand-black p-8 bg-white brutal-shadow">
+                <h3 class="font-display text-2xl font-bold mb-3 text-brand-blue">05. Networking</h3>
+                <p class="text-gray-700 font-medium">Direct access to high-value peers, refreshments, and VIP Tags.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING CTA -->
+    <section class="bg-brand-black text-white py-24 border-y-4 border-brand-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6">Ready to Own the Stage?</h2>
+            <p class="text-xl text-gray-400 mb-12">Spaces are strictly limited to ensure an interactive, practical experience.</p>
+            
+            <div class="border-4 border-brand-blue p-10 lg:p-16 bg-white text-brand-black brutal-shadow-blue inline-block w-full max-w-2xl relative">
+                <div class="absolute -top-5 right-1/2 translate-x-1/2 bg-brand-blue text-white font-display font-bold px-6 py-2 border-2 border-brand-black whitespace-nowrap">VIP TICKET ONLY</div>
+                
+                <div class="text-6xl font-display font-bold mb-2 mt-4">₦7,000</div>
+                <div class="text-xl text-gray-500 line-through mb-10 font-medium">Regular: ₦10,000</div>
+                
+                <a href="https://www.nestuge.com/mps2026" target="_blank" class="block w-full text-center bg-brand-blue text-white border-4 border-brand-black font-display font-bold text-2xl py-5 brutal-shadow brutal-hover-blue transition-all">
+                    GET YOUR TICKET NOW
+                </a>
+                <p class="mt-4 font-bold text-gray-500">Secure checkout via Nestuge</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white text-center py-10">
+        <p class="font-display text-lg font-bold">© 2026 Anthony Nduka. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
