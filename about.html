@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Anthony Nduka | Annaelechukwu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055FF',
+                            black: '#0A0A0A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px #0A0A0A; }
+        .brutal-shadow-blue { box-shadow: 6px 6px 0px 0px #0055FF; }
+        .brutal-hover:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px #0A0A0A; }
+    </style>
+</head>
+<body class="bg-white text-brand-black font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- CENTERED NAVIGATION BAR -->
+    <nav class="border-b-4 border-brand-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center overflow-x-auto">
+            <ul class="flex space-x-2 md:space-x-8 font-display font-bold text-sm md:text-lg whitespace-nowrap">
+                <li><a href="index.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">HOME</a></li>
+                <li><a href="products.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">PRODUCTS</a></li>
+                <li><a href="work.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">WORK</a></li>
+                <li><a href="about.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors bg-brand-black text-white">ABOUT</a></li>
+                <li><a href="archives.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">ARCHIVES</a></li>
+                <li><a href="contact.html" class="px-3 py-2 border-2 border-transparent hover:border-brand-black hover:bg-brand-blue hover:text-white transition-colors">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <section class="bg-brand-black text-white py-20 lg:py-32 border-b-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="font-display text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    The Human Behind the <span class="text-brand-blue">Ecosystems.</span>
+                </h1>
+                <p class="text-xl mb-10 leading-relaxed font-medium text-gray-300">
+                    I am Anthony Nduka (Annaelechukwu)—a strategist, developer, and community architect dedicated to driving Web3 adoption and empowering the next generation of builders across Africa.
+                </p>
+            </div>
+            <div class="flex justify-center p-4">
+                <img src="headshot.jpg" alt="Anthony Nduka" class="w-full max-w-sm h-auto object-cover border-4 border-white brutal-shadow-blue rotate-2 hover:rotate-0 transition-transform aspect-square" onerror="this.src='https://placehold.co/600x600/0055FF/FFF?text=Anthony+Nduka'">
+            </div>
+        </div>
+    </section>
+
+    <!-- THE STORY SECTION -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="grid lg:grid-cols-12 gap-12">
+            
+            <!-- LEFT SIDE: PUNCHY TEXT -->
+            <div class="lg:col-span-5">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6 leading-tight">I bridge the gap between complex tech and the people who use it.</h2>
+                <div class="bg-[#f4f4f4] border-4 border-brand-black p-6 brutal-shadow mb-8">
+                    <p class="font-display font-bold text-xl italic text-brand-blue">"Community is not just a Discord server. It is a highly strategic growth engine."</p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: THE NARRATIVE -->
+            <div class="lg:col-span-7 space-y-6 text-lg text-gray-800 leading-relaxed">
+                <p>
+                    My journey started at the University of Nigeria, Nsukka (UNN), where I graduated with a BSc in Computer Science. I quickly realized that building great technology wasn't enough—someone had to translate that technology into real-world utility and adoption. 
+                </p>
+                <p>
+                    That realization led me to co-found <strong>BlockchainUNN</strong>, which grew into a powerhouse campus Web3 developer community. From there, I took on roles that required massive scale: training over 5,000 members for FTX Africa[cite: 5], serving as a regional Chapter Lead for CMX, and driving the strategy that onboarded 2M+ users to Celo's Minipay[cite: 4].
+                </p>
+                <p>
+                    Today, I serve as the Head of Marketing and Growth at <strong>cKash</strong>, a self-custodial digital payments wallet operating on the Celo blockchain. Under my leadership, we successfully secured the Prezenti Almond Grant to aggressively expand stablecoin utility across Africa.
+                </p>
+                <p>
+                    While growth marketing is my day-to-day, my roots remain technical. I still actively build—whether that's developing full-stack web applications, architecting off-grid IoT smart agricultural systems (like AVATAR), or creating Web3 audio-visual digital art experiences. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEYOND THE SCREEN / PERSONAL -->
+    <section class="bg-[#f4f4f4] py-24 border-y-4 border-brand-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-display text-4xl font-bold mb-12 text-center">Beyond the Screen.</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Vibe 1 -->
+                <div class="border-4 border-brand-black bg-white p-8 brutal-shadow text-center">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Sustainability</h3>
+                    <p class="text-gray-700">Passionate about the environment. I actively volunteer with Plogging Nigeria[cite: 5] to drive local environmental sustainability initiatives.</p>
+                </div>
+                <!-- Vibe 2 -->
+                <div class="border-4 border-brand-black bg-white p-8 brutal-shadow text-center">
+                    <div class="text-5xl mb-4">🏸</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Badminton</h3>
+                    <p class="text-gray-700">When I'm not orchestrating campaigns or writing code, you can usually find me on the badminton court engaging in campus sports[cite: 5].</p>
+                </div>
+                <!-- Vibe 3 -->
+                <div class="border-4 border-brand-black bg-white p-8 brutal-shadow text-center">
+                    <div class="text-5xl mb-4">🎧</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Music & Travel</h3>
+                    <p class="text-gray-700">Traveling fuels my perspective on global tech ecosystems[cite: 4], while music keeps me in the zone during deep-work execution blocks[cite: 4].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CREDENTIALS -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="font-display text-4xl font-bold mb-12 text-center">The Foundation.</h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            
+            <div>
+                <h3 class="font-display text-2xl font-bold mb-6 text-brand-blue border-b-4 border-brand-black pb-2 inline-block">Education</h3>
+                <ul class="space-y-6">
+                    <li>
+                        <p class="font-bold text-xl">BSc, Computer Science</p>
+                        <p class="text-gray-600">University of Nigeria, Nsukka (UNN) | Class of 2026</p>
+                    </li>
+                    <li>
+                        <p class="font-bold text-xl">National Diploma</p>
+                        <p class="text-gray-600">Our Saviour Institute of Science, Agriculture and Technology (OSISATECH) | 2016-2018[cite: 5]</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-display text-2xl font-bold mb-6 text-brand-blue border-b-4 border-brand-black pb-2 inline-block">Certifications & Cohorts</h3>
+                <ul class="space-y-6">
+                    <li>
+                        <p class="font-bold text-xl">StackShift ETA Cohort</p>
+                        <p class="text-gray-600">2023 Graduate</p>
+                    </li>
+                    <li>
+                        <p class="font-bold text-xl">The Community MBA</p>
+                        <p class="text-gray-600">CMX[cite: 5]</p>
+                    </li>
+                    <li>
+                        <p class="font-bold text-xl">Metaverse Foundations</p>
+                        <p class="text-gray-600">Third Academy[cite: 5]</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white text-center py-10 border-t-4 border-brand-black mt-12">
+        <p class="font-display text-lg font-bold">© 2026 Anthony Nduka. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
